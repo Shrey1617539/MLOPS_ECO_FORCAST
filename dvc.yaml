@@ -1,0 +1,23 @@
+stages:
+  data_collection:
+    cmd: python -m src.pipelines.data_collection
+    deps:
+      - src/data/api_client.py
+      - src/pipelines/data_collection.py
+      - config/cities.yaml
+      - config/pipeline.yaml
+
+  predict:
+    cmd: python -m src.pipelines.predict_pipeline
+    deps:
+      - src/pipelines/predict_pipeline.py
+      - data/processed
+      - models/models
+
+  drift_detection:
+    cmd: python -m src.pipelines.drift_monitoring_pipeline
+    deps:
+      - src/pipelines/drift_monitoring_pipeline.py
+      - src/monitoring/drift_detection.py
+      - data/processed
+      - models/models

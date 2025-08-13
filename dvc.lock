@@ -1,0 +1,59 @@
+schema: '2.0'
+stages:
+  data_collection:
+    cmd: python -m src.pipelines.data_collection
+    deps:
+    - path: config/cities.yaml
+      hash: md5
+      md5: 9e622bf50750a487c822d72dfcc4ede9
+      size: 694
+    - path: config/pipeline.yaml
+      hash: md5
+      md5: 1e38c1f036b9baadfbd2cd5a846b747a
+      size: 697
+    - path: src/data/api_client.py
+      hash: md5
+      md5: adc28e72e49b13c3fb79f4099d5c4225
+      size: 3923
+    - path: src/pipelines/data_collection.py
+      hash: md5
+      md5: 78c2b41665113b2b48c75154073c352f
+      size: 3582
+  predict:
+    cmd: python -m src.pipelines.predict_pipeline
+    deps:
+    - path: data/processed
+      hash: md5
+      md5: e0d0d0d16f42c653ad30041bb2b1aedb.dir
+      size: 133096
+      nfiles: 4
+    - path: models/models
+      hash: md5
+      md5: 663a9b96900f53a5cf94505209396945.dir
+      size: 80240931
+      nfiles: 142
+    - path: src/pipelines/predict_pipeline.py
+      hash: md5
+      md5: 3795a39fdae6102224695b76b6ea030c
+      size: 6324
+  drift_detection:
+    cmd: python -m src.pipelines.drift_monitoring_pipeline
+    deps:
+    - path: data/processed
+      hash: md5
+      md5: e0d0d0d16f42c653ad30041bb2b1aedb.dir
+      size: 133096
+      nfiles: 4
+    - path: models/models
+      hash: md5
+      md5: 663a9b96900f53a5cf94505209396945.dir
+      size: 80240931
+      nfiles: 142
+    - path: src/monitoring/drift_detection.py
+      hash: md5
+      md5: a4f9d1f9477ffec737762b1a1ef99291
+      size: 7090
+    - path: src/pipelines/drift_monitoring_pipeline.py
+      hash: md5
+      md5: ba37207f5d4a0b8f6d1bfbe1b412365b
+      size: 5877

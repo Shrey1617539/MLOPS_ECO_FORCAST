@@ -1,0 +1,12 @@
+FROM apache/airflow:2.10.5-python3.9
+
+# Copy requirements.txt into the image
+COPY requirements.txt /requirements.txt
+
+# Install dependencies
+RUN pip install --no-cache-dir -r /requirements.txt
+
+EXPOSE 5000
+
+# Start MLflow server on container start
+CMD ["mlflow", "server", "--host", "127.0.0.1", "--port", "5000"]
