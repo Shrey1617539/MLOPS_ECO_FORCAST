@@ -1,0 +1,6 @@
+outs:
+- md5: a98693664bd3e83d38ea815ed1b258d4
+  size: 515712
+  isexec: true
+  hash: md5
+  path: chennai_model.h5

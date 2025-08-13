@@ -1,0 +1,6 @@
+outs:
+- md5: 576181fdd80d674fd15bb6c7e4375533
+  size: 515712
+  isexec: true
+  hash: md5
+  path: mumbai_model.h5

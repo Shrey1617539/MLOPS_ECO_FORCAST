@@ -1,0 +1,36 @@
+cities:
+  - name: Chennai
+    id: 1264527
+    country: IN
+    lat: 13.0827
+    lon: 80.2707
+  - name: Mumbai
+    id: 1275339
+    country: IN
+    lat: 19.0760
+    lon: 72.8777
+  - name: Bengaluru
+    id: 1277333
+    country: IN
+    lat: 12.9716
+    lon: 77.5946
+  - name: Delhi
+    id: 1264527
+    country: IN
+    lat: 28.6139
+    lon: 77.2090
+  # - name: New York
+  #   id: 5128581
+  #   country: US
+  #   latitude: 40.7128
+  #   longitude: -74.0060
+  # - name: London
+  #   id: 2643743
+  #   country: GB
+  #   latitude: 51.5074
+  #   longitude: -0.1278
+  # - name: Tokyo
+  #   id: 1850147
+  #   country: JP
+  #   latitude: 35.6762
+  #   longitude: 139.6503

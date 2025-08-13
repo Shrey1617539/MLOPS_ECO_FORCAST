@@ -1,0 +1,6 @@
+outs:
+- md5: 7e6dfcf48cfaa538f528a97de0d69259
+  size: 515712
+  isexec: true
+  hash: md5
+  path: delhi_model.h5

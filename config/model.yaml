@@ -1,0 +1,25 @@
+model:
+  type: "lstm" # Options: lstm, prophet, arima
+  parameters:
+    lstm:
+      units: 64
+      layers: 2
+      dropout: 0.2
+      epochs: 50
+      batch_size: 32
+      sequence_length: 7 # Number of previous days to use
+
+  features:
+    - temperature
+    - humidity
+    - pressure
+    - wind_speed
+
+  target: temperature # What we're predicting
+
+  evaluation:
+    metrics:
+      - mae
+      - rmse
+      - mape
+    test_size: 0.2

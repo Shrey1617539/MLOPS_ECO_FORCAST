@@ -1,0 +1,5 @@
+{
+  "timestamp": "2025-04-29T17:49:08.508105",
+  "status": "skipped",
+  "message": "Not enough prediction data (less than 1 month) to run drift detection."
+}

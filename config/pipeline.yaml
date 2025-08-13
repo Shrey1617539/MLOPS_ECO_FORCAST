@@ -1,0 +1,20 @@
+pipeline:
+  data_collection:
+    schedule: "0 1 * * *" # Run at 1:00 AM every day
+    api:
+      base_url: "https://api.openweathermap.org/data/2.5"
+      endpoint: "weather"
+      units: "metric"
+      timeout: 30 # seconds
+      retry_attempts: 3
+      retry_delay: 5 # seconds
+      api_key: "${OPENWEATHER_API_KEY}" # Environment variable reference
+
+  prediction:
+    schedule: "0 2 * * *" # Run at 2:00 AM every day
+    lookback_days: 7 # Number of previous days to use for prediction
+
+  drift_detection:
+    schedule: "0 3 * * 1" # Run at 3:00 AM every Monday
+    lookback_period: 30 # Days to look back for drift detection
+    threshold: 0.1 # Drift detection threshold
