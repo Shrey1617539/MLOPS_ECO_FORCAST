@@ -1,0 +1,6 @@
+artifact_location: file:///mnt/c/Users/shrey/Desktop/ACAD/MLOPS/project%203/src/pipelines/mlruns/552862238747256992
+creation_time: 1745946146128
+experiment_id: '552862238747256992'
+last_update_time: 1745946146128
+lifecycle_stage: active
+name: weather_forecasting_retraining
